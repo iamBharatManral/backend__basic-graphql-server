@@ -1,0 +1,16 @@
+type Post {
+    id: ID!
+    userId: ID
+    title: String!
+    description: String
+}
+type User {
+    firstname: String!
+    lastname: String!
+    age: Int
+    posts: [Post]
+}
+type Query {
+    allUsers: [User]
+    userById(id: Int): User
+}
